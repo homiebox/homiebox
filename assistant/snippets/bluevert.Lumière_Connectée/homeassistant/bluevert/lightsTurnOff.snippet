@@ -1,0 +1,8 @@
+house_room = data.get('house_room')
+logger.info('lightsTurnOff')
+if house_room is not None && len(house_room) > 0:
+  entity_id = 'light.{}'.format(house_room)
+  service_data = {' light.unknown_node_40_level': entity_id }
+  hass.services.call('light', 'turn_off', service_data, False)
+else:
+  hass.services.call('light', 'turn_off')

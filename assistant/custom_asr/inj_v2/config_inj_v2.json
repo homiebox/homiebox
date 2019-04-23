@@ -1,0 +1,100 @@
+{
+    "up_down_lights": {
+        "vanilla": "48f85e71-2179-4a5b-95dc-bb389bbb1b33.vanilla", 
+        "ngram": true, 
+        "added": "48f85e71-2179-4a5b-95dc-bb389bbb1b33.added", 
+        "pruningThresholds": [], 
+        "order": 3
+    }, 
+    "Qualificatif": {
+        "vanilla": "ad917991-5fb5-40b1-b415-bd3c30445d46.vanilla", 
+        "ngram": true, 
+        "added": "ad917991-5fb5-40b1-b415-bd3c30445d46.added", 
+        "pruningThresholds": [], 
+        "order": 3
+    }, 
+    "snips/default--word": {
+        "vanilla": "720acb45-8cf5-4c51-9454-8dcd3ef8c728.vanilla", 
+        "ngram": true, 
+        "added": "720acb45-8cf5-4c51-9454-8dcd3ef8c728.added", 
+        "pruningThresholds": [], 
+        "order": 3
+    }, 
+    "Letter": {
+        "vanilla": "b6080572-8c48-4349-a249-1a3cdb7655e7.vanilla", 
+        "ngram": true, 
+        "added": "b6080572-8c48-4349-a249-1a3cdb7655e7.added", 
+        "pruningThresholds": [], 
+        "order": 3
+    }, 
+    "Jeu": {
+        "vanilla": "72c3c94d-2d8e-4e1c-a549-8be6a722aacd.vanilla", 
+        "ngram": true, 
+        "added": "72c3c94d-2d8e-4e1c-a549-8be6a722aacd.added", 
+        "pruningThresholds": [], 
+        "order": 3
+    }, 
+    "snips/default--Name": {
+        "vanilla": "0c329c67-c6b7-46c5-82b1-5f3d54866f45.vanilla", 
+        "ngram": true, 
+        "added": "0c329c67-c6b7-46c5-82b1-5f3d54866f45.added", 
+        "pruningThresholds": [], 
+        "order": 3
+    }, 
+    "snips/number": {
+        "vanilla": "30ebfbe2-3b04-4ce8-9863-9d7b80e22bfc.vanilla", 
+        "ngram": false, 
+        "added": "30ebfbe2-3b04-4ce8-9863-9d7b80e22bfc.added", 
+        "pruningThresholds": [], 
+        "order": 0
+    }, 
+    "house_room": {
+        "vanilla": "f92f3449-f00b-46a9-a865-74df9d9d625a.vanilla", 
+        "ngram": true, 
+        "added": "f92f3449-f00b-46a9-a865-74df9d9d625a.added", 
+        "pruningThresholds": [], 
+        "order": 3
+    }, 
+    "lights_type": {
+        "vanilla": "b2764cc5-2e9d-46c4-af84-d6b565de588a.vanilla", 
+        "ngram": true, 
+        "added": "b2764cc5-2e9d-46c4-af84-d6b565de588a.added", 
+        "pruningThresholds": [], 
+        "order": 3
+    }, 
+    "snips/percentage": {
+        "vanilla": "36a896ed-be89-416b-af84-017cf5645a8a.vanilla", 
+        "ngram": false, 
+        "added": "36a896ed-be89-416b-af84-017cf5645a8a.added", 
+        "pruningThresholds": [], 
+        "order": 0
+    }, 
+    "StartStop": {
+        "vanilla": "879b14c4-7035-4a16-ab18-e053959d47de.vanilla", 
+        "ngram": true, 
+        "added": "879b14c4-7035-4a16-ab18-e053959d47de.added", 
+        "pruningThresholds": [], 
+        "order": 3
+    }, 
+    "List of capitales": {
+        "vanilla": "aba13b3c-ff3c-4df9-9906-61e03e18cfc0.vanilla", 
+        "ngram": true, 
+        "added": "aba13b3c-ff3c-4df9-9906-61e03e18cfc0.added", 
+        "pruningThresholds": [], 
+        "order": 3
+    }, 
+    "Article": {
+        "vanilla": "f7f0017f-ed9d-43b3-acd4-713bf6f1fdc0.vanilla", 
+        "ngram": true, 
+        "added": "f7f0017f-ed9d-43b3-acd4-713bf6f1fdc0.added", 
+        "pruningThresholds": [], 
+        "order": 3
+    }, 
+    "Quoi": {
+        "vanilla": "60e81166-0d40-470a-9472-e259982952bf.vanilla", 
+        "ngram": true, 
+        "added": "60e81166-0d40-470a-9472-e259982952bf.added", 
+        "pruningThresholds": [], 
+        "order": 3
+    }
+}

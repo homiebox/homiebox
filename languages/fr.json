@@ -1,0 +1,13 @@
+{
+	"appReady": "C'est parti!",
+	"stopping": "Fin du jeu",
+	"warningRecipeAlreadyOpen": "Le jeu {} est deja ouvert",
+	"confirmOpening": "D'accord. Jouons à {}",
+	"recipeEnd": "Nous sommes arrivé à la fin de la recette, il n'y a pas d'étape supplémentaire, si ce n'est déguster la préparation! Bon appetit!",
+	"nextStep": "Voici la prochaine étape: {}",
+	"noPreviousStep": "Il n'y a pas d'étape précédante",
+	"previousStepWas": "L'étape précédente était: {}",
+	"nothingToSayNotStarted": "Je n'ai rien a répéter, on a même pas commencé!",
+	"repeatStep": "L'étape était: {}",
+	"error": "Désolé, mais il y a eu une erreur",
+}

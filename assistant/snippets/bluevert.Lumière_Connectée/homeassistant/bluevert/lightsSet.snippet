@@ -1,0 +1,7 @@
+house_room = data.get('house_room')
+logger.info('lightsTurnOnSet')
+if house_room is not None:
+  entity_id = 'light.{}'.format(house_room)
+  service_data = {'entity_id': entity_id }
+  hass.services.call('light', 'turn_on', service_data, False)
+
