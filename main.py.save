@@ -84,7 +84,7 @@ def onMessage(client, userData, message):
 			return
 
 		slotGameName = payload['slots'][0]['value']['value'].encode('utf-8')
-
+)
 
 		if game is not None and currentStep > 0:
 			if confirm <= 0:
@@ -92,7 +92,6 @@ def onMessage(client, userData, message):
 				endTalk(sessionId, text=lang['warningGameAlreadyOpen'])
 				return
 			else:
-				endTalk(text=lang['debug'].format(payload['slots'][0]['rawValue']))
 				confirm = 0
 				currentStep = 0
 
@@ -100,23 +99,23 @@ def onMessage(client, userData, message):
 			endTalk(sessionId, text=lang['confirmOpening'].format(payload['slots'][0]['rawValue']))
 			currentStep = 0
 
-			file = codecs.open('./games/{}/{}.json'.format(settings.LANG, slotGameName.lower()), 'r', encoding='utf-8')
+			file = codecs.open('./games/{}/{}.json'.format(settings.LANG, slotRecipeName.lower()), 'r', encoding='utf-8')
 			string = file.read()
 			file.close()
-			game = json.loads(string)
+			recipe = json.loads(string)
 
 			time.sleep(2)
 
-			gameName = game['name'] if 'phonetic' not in game else game['phonetic']
-			timeType = lang['cookingTime'] if 'cookingTime' in game else lang['waitTime']
-			cookOrWaitTime = game['cookingTime'] if 'cookingTime' in game else game['waitTime']
+			recipeName = recipe['name'] if 'phonetic' not in recipe else recipe['phonetic']
+			timeType = lang['cookingTime'] if 'cookingTime' in recipe else lang['waitTime']
+			cookOrWaitTime = recipe['cookingTime'] if 'cookingTime' in recipe else recipe['waitTime']
 
-			say(text=lang['gamePresentation'].format(
-				gameName,
-				game['difficulty'],
-				game['person'],
-				game['totalTime'],
-				game['preparationTime'],
+			say(text=lang['recipePresentation'].format(
+				recipeName,
+				recipe['difficulty'],
+				recipe['person'],
+				recipe['totalTime'],
+				recipe['preparationTime'],
 				cookOrWaitTime,
 				timeType
 			))
@@ -124,14 +123,14 @@ def onMessage(client, userData, message):
 			endTalk(sessionId, text=lang['gameNotFound'])
 
 	elif intent == NEXT_STEP:
-		if game is None:
-			endTalk(sessionId, text=lang['sorryNoGameOpen'])
+		if recipe is None:
+			endTalk(sessionId, text=lang['sorryNoRecipeOpen'])
 		else:
-			if str(currentStep + 1) not in game['steps']:
-				endTalk(sessionId, text=lang['gameEnd'])
+			if str(currentStep + 1) not in recipe['steps']:
+				endTalk(sessionId, text=lang['recipeEnd'])
 			else:
 				currentStep += 1
-				step = game['steps'][str(currentStep)]
+				step = recipe['steps'][str(currentStep)]
 
 				ask = False
 				if type(step) is dict and currentStep not in timers:
@@ -143,24 +142,24 @@ def onMessage(client, userData, message):
 					say(text=lang['timeAsk'])
 
 	elif intent == INGREDIENTS:
-		if game is None:
-			endTalk(sessionId, text=lang['sorryNoGameOpen'])
+		if recipe is None:
+			endTalk(sessionId, text=lang['sorryNoRecipeOpen'])
 		else:
 			ingredients = ''
-			for ingredient in game['ingredients']:
+			for ingredient in recipe['ingredients']:
 				ingredients += u"{}. ".format(ingredient)
 
-			endTalk(sessionId, text=lang['neededIngredients'].format(game['name'], ingredients))
+			endTalk(sessionId, text=lang['neededIngredients'].format(recipe['name'], ingredients))
 
 	elif intent == PREVIOUS_STEP:
-		if game is None:
-			endTalk(sessionId, text=lang['sorryNoGameOpen'])
+		if recipe is None:
+			endTalk(sessionId, text=lang['sorryNoRecipeOpen'])
 		else:
 			if currentStep <= 1:
 				endTalk(sessionId, text=lang['noPreviousStep'])
 			else:
 				currentStep -= 1
-				step = game['steps'][str(currentStep)]
+				step = recipe['steps'][str(currentStep)]
 
 				ask = False
 				timer = 0
@@ -174,20 +173,20 @@ def onMessage(client, userData, message):
 					say(text=lang['hadTimerAsk'].format(timer))
 
 	elif intent == REPEAT_STEP:
-		if game is None:
-			endTalk(sessionId, text=lang['sorryNoGameOpen'])
+		if recipe is None:
+			endTalk(sessionId, text=lang['sorryNoRecipeOpen'])
 		else:
 			if currentStep <= 1:
 				endTalk(sessionId, text=lang['nothingToSayNotStarted'])
 			else:
-				step = game['steps'][str(currentStep)]
+				step = recipe['steps'][str(currentStep)]
 				endTalk(sessionId, text=lang['repeatStep'].format(step))
 
 	elif intent == ACTIVATE_TIMER:
-		if game is None:
+		if recipe is None:
 			endTalk(sessionId, text=lang['noTimerNotStarted'])
 		else:
-			step = game['steps'][str(currentStep)]
+			step = recipe['steps'][str(currentStep)]
 
 			if type(step) is not dict:
 				endTalk(sessionId, text=lang['notTimerForThisStep'])
@@ -228,7 +227,7 @@ def onTimeUp(*args, **kwargs):
 mqttClient = None
 leds = None
 running = True
-game = None
+recipe = None
 currentStep = 0
 timers = {}
 confirm = 0
