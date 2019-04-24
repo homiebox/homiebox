@@ -141,85 +141,20 @@
   "custom_entity_parser": "custom_entity_parser",
   "dataset_metadata": {
     "entities": {
-      "Article": {
-        "automatically_extensible": false
-      },
       "Jeu": {
         "automatically_extensible": false
       },
       "Letter": {
         "automatically_extensible": false
-      },
-      "List of capitales": {
-        "automatically_extensible": false
-      },
-      "Qualificatif": {
-        "automatically_extensible": false
-      },
-      "Quoi": {
-        "automatically_extensible": false
-      },
-      "StartStop": {
-        "automatically_extensible": false
-      },
-      "house_room": {
-        "automatically_extensible": false
-      },
-      "lights_type": {
-        "automatically_extensible": false
-      },
-      "snips/default--Name": {
-        "automatically_extensible": false
-      },
-      "snips/default--word": {
-        "automatically_extensible": false
-      },
-      "up_down_lights": {
-        "automatically_extensible": false
       }
     },
     "language_code": "fr",
     "slot_name_mappings": {
-      "Domos:Quicestqui": {
-        "article": "Article",
-        "qualif": "Qualificatif",
-        "quoi": "Quoi"
-      },
-      "MagicBoxEi2i:Name": {
-        "Name": "snips/default--Name"
-      },
       "MagicBoxEi2i:Ouvrejeu": {
         "Jeu": "Jeu"
       },
-      "MagicBoxEi2i:getLetter": {
-        "letter": "Letter"
-      },
-      "MagicBoxEi2i:getWord": {
-        "word": "snips/default--word"
-      },
-      "MagicBoxEi2i:startGame": {
-        "order": "StartStop"
-      },
-      "bluevert:lightsSet": {
-        "house_room": "house_room",
-        "intensity_number": "snips/number",
-        "intensity_percent": "snips/percentage",
-        "lights_type": "lights_type"
-      },
-      "bluevert:lightsTurnOff": {
-        "house_room": "house_room",
-        "lights_type": "lights_type"
-      },
-      "dbddv01:does_not_know": {},
-      "dbddv01:give_answer": {
-        "answer": "List of capitales"
-      },
-      "dbddv01:interrupt": {},
-      "dbddv01:start_lesson": {},
-      "lightsShift": {
-        "house_room": "house_room",
-        "intensity_percent": "snips/percentage",
-        "up_down": "up_down_lights"
+      "MagicBoxEi2i:quelleLettre": {
+        "Letter": "Letter"
       }
     }
   },

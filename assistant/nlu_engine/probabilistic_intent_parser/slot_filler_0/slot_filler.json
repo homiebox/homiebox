@@ -70,9 +70,7 @@
       {
         "args": {
           "entities": [
-            "Article",
-            "Qualificatif",
-            "Quoi"
+            "Jeu"
           ],
           "tagging_scheme_code": 2,
           "use_stemming": true
@@ -111,12 +109,10 @@
     "tagging_scheme": 1,
     "unit_name": "crf_slot_filler"
   },
-  "crf_model_file": "modelXkzp8K.crfsuite",
-  "intent": "Domos:Quicestqui",
+  "crf_model_file": "modelv1HaIp.crfsuite",
+  "intent": "MagicBoxEi2i:Ouvrejeu",
   "language_code": "fr",
   "slot_name_mapping": {
-    "article": "Article",
-    "qualif": "Qualificatif",
-    "quoi": "Quoi"
+    "Jeu": "Jeu"
   }
 }

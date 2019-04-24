@@ -25,13 +25,13 @@ logging.basicConfig(
 	filemode='w'
 )
 
-OPEN_GAME 				= 'hermes/intent/MagicBoxEi2i:Ouvrejeu'
-GET_LETTER				= 'hermes/intent/MagicBoxEi2i:quelleLettre'
+OPEN_GAME 			= 'hermes/intent/MagicBoxEi2i:Ouvrejeu'
+GET_LETTER			= 'hermes/intent/MagicBoxEi2i:quelleLettre'
 
-HERMES_ON_HOTWORD 			= 'hermes/hotword/default/detected'
+HERMES_ON_HOTWORD 		= 'hermes/hotword/default/detected'
 HERMES_START_LISTENING 		= 'hermes/asr/startListening'
-HERMES_SAY 					= 'hermes/tts/say'
-HERMES_CAPTURED 			= 'hermes/asr/textCaptured'
+HERMES_SAY 			= 'hermes/tts/say'
+HERMES_CAPTURED 		= 'hermes/asr/textCaptured'
 HERMES_HOTWORD_TOGGLE_ON 	= 'hermes/hotword/toggleOn'
 
 def onConnect(client, userData, flags, rc):
@@ -124,34 +124,11 @@ def onMessage(client, userData, message):
 
 		else:
 			if game is not None:
-				slotLetter = payload['slot'][0]['value']['value'].encode('utf-8')
-				if slotLetter == 'h':
-					endTalk(sessionId, text=lang['debug'])
-					currentStep += 1
-
-#			if confirm <=0:
-#				confirm = 1
-#				endTalk(sessionID, text=lang['warningGameAlreadyOpen'])
-#				return
-#			else:
-#				say(text=lang['debug'])
-#				confirm = 0
-#				currentStep = 1
-#
-#		if str(currentStep + 1) not in game['steps']:
-#			endTalk(sessionId, text=lang['gameEnd'])
-#		else:
-#			currentStep += 1
-#			step = game['steps'][str(currentStep)]
-#
-#			ask = False
-#			if type(step) is dict and currentStep not in timers:
-#					ask = True
-#					step = step['text']
-#
-#				endTalk(sessionId, text=lang['nextStep'].format(step))
-#			if ask:
-#				say(text=lang['timeAsk'])
+				#endTalk(sessionId, text=lang['debug'])
+				slotLetter = payload['slot'].encode('utf-8')
+                                letter1 = 'h'
+                        if slotLetter == 'h':
+                                 endTalk(sessionId, text=lang['debug'])
 
 def error(sessionId):
 	endTalk(sessionId, lang['error'])

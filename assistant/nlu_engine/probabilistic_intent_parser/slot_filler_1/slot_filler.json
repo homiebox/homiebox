@@ -70,7 +70,7 @@
       {
         "args": {
           "entities": [
-            "snips/default--Name"
+            "Letter"
           ],
           "tagging_scheme_code": 2,
           "use_stemming": true
@@ -109,10 +109,10 @@
     "tagging_scheme": 1,
     "unit_name": "crf_slot_filler"
   },
-  "crf_model_file": "modelPwQr6d.crfsuite",
-  "intent": "MagicBoxEi2i:Name",
+  "crf_model_file": "modelQoNFmX.crfsuite",
+  "intent": "MagicBoxEi2i:quelleLettre",
   "language_code": "fr",
   "slot_name_mapping": {
-    "Name": "snips/default--Name"
+    "Letter": "Letter"
   }
 }

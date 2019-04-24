@@ -128,56 +128,12 @@
   },
   "slot_fillers": [
     {
-      "intent": "Domos:Quicestqui",
+      "intent": "MagicBoxEi2i:Ouvrejeu",
       "slot_filler_name": "slot_filler_0"
     },
     {
-      "intent": "MagicBoxEi2i:Name",
+      "intent": "MagicBoxEi2i:quelleLettre",
       "slot_filler_name": "slot_filler_1"
-    },
-    {
-      "intent": "MagicBoxEi2i:Ouvrejeu",
-      "slot_filler_name": "slot_filler_2"
-    },
-    {
-      "intent": "MagicBoxEi2i:getLetter",
-      "slot_filler_name": "slot_filler_3"
-    },
-    {
-      "intent": "MagicBoxEi2i:getWord",
-      "slot_filler_name": "slot_filler_4"
-    },
-    {
-      "intent": "MagicBoxEi2i:startGame",
-      "slot_filler_name": "slot_filler_5"
-    },
-    {
-      "intent": "bluevert:lightsSet",
-      "slot_filler_name": "slot_filler_6"
-    },
-    {
-      "intent": "bluevert:lightsTurnOff",
-      "slot_filler_name": "slot_filler_7"
-    },
-    {
-      "intent": "dbddv01:does_not_know",
-      "slot_filler_name": "slot_filler_8"
-    },
-    {
-      "intent": "dbddv01:give_answer",
-      "slot_filler_name": "slot_filler_9"
-    },
-    {
-      "intent": "dbddv01:interrupt",
-      "slot_filler_name": "slot_filler_10"
-    },
-    {
-      "intent": "dbddv01:start_lesson",
-      "slot_filler_name": "slot_filler_11"
-    },
-    {
-      "intent": "lightsShift",
-      "slot_filler_name": "slot_filler_12"
     }
   ]
 }

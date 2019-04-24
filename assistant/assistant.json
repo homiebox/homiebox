@@ -2,62 +2,6 @@
   "id" : "proj_KpY4V0NEag",
   "name" : "Homie Box",
   "intents" : [ {
-    "id" : "MagicBoxEi2i:Name",
-    "type" : "registry",
-    "version" : "0.1.0",
-    "language" : "fr",
-    "slots" : [ {
-      "name" : "Name",
-      "id" : "iStmU2JYc",
-      "entityId" : "snips/default",
-      "missingQuestion" : "",
-      "required" : false
-    } ],
-    "name" : "Name",
-    "enabledByDefault" : true
-  }, {
-    "id" : "MagicBoxEi2i:getLetter",
-    "type" : "registry",
-    "version" : "0.3.0",
-    "language" : "fr",
-    "slots" : [ {
-      "name" : "letter",
-      "id" : "hUFtkfYBA",
-      "entityId" : "entity_d73PMlKxeEO",
-      "missingQuestion" : "",
-      "required" : false
-    } ],
-    "name" : "getLetter",
-    "enabledByDefault" : true
-  }, {
-    "id" : "MagicBoxEi2i:getWord",
-    "type" : "registry",
-    "version" : "0.4.0",
-    "language" : "fr",
-    "slots" : [ {
-      "name" : "word",
-      "id" : "e3x8JD-vf",
-      "entityId" : "snips/default",
-      "missingQuestion" : "",
-      "required" : false
-    } ],
-    "name" : "getWord",
-    "enabledByDefault" : true
-  }, {
-    "id" : "MagicBoxEi2i:startGame",
-    "type" : "registry",
-    "version" : "0.2.0",
-    "language" : "fr",
-    "slots" : [ {
-      "name" : "order",
-      "id" : "o1Kd7aU8y",
-      "entityId" : "entity_wwxA4dnAW3l",
-      "missingQuestion" : "",
-      "required" : false
-    } ],
-    "name" : "startGame",
-    "enabledByDefault" : true
-  }, {
     "id" : "MagicBoxEi2i:Ouvrejeu",
     "type" : "registry",
     "version" : "0.8.0",
@@ -73,146 +17,18 @@
     "name" : "Ouvrejeu",
     "enabledByDefault" : true
   }, {
-    "id" : "Domos:Quicestqui",
+    "id" : "MagicBoxEi2i:quelleLettre",
     "type" : "registry",
-    "version" : "1.0.0",
+    "version" : "0.2.0",
     "language" : "fr",
     "slots" : [ {
-      "name" : "article",
-      "id" : "slot_imported_Sky5yFfWQ",
-      "entityId" : "entity_W5Vpq3M6M3vW",
-      "missingQuestion" : "",
-      "required" : false
-    }, {
-      "name" : "qualif",
-      "id" : "slot_imported_SJe19yKf-X",
-      "entityId" : "entity_72Mv86qPNk9m",
-      "missingQuestion" : "",
-      "required" : false
-    }, {
-      "name" : "quoi",
-      "id" : "slot_imported_HJZk9ktGb7",
-      "entityId" : "entity_Xro97ZwDebP6",
+      "name" : "Letter",
+      "id" : "mqmfEz_cN",
+      "entityId" : "entity_d73PMlKxeEO",
       "missingQuestion" : "",
       "required" : false
     } ],
-    "name" : "Quicestqui",
-    "enabledByDefault" : true
-  }, {
-    "id" : "dbddv01:start_lesson",
-    "type" : "registry",
-    "version" : "1.0.0",
-    "language" : "fr",
-    "slots" : [ ],
-    "name" : "start_lesson",
-    "enabledByDefault" : true
-  }, {
-    "id" : "dbddv01:interrupt",
-    "type" : "registry",
-    "version" : "1.0.0",
-    "language" : "fr",
-    "slots" : [ ],
-    "name" : "interrupt",
-    "enabledByDefault" : true
-  }, {
-    "id" : "dbddv01:does_not_know",
-    "type" : "registry",
-    "version" : "1.0.0",
-    "language" : "fr",
-    "slots" : [ ],
-    "name" : "does_not_know",
-    "enabledByDefault" : true
-  }, {
-    "id" : "dbddv01:give_answer",
-    "type" : "registry",
-    "version" : "1.0.0",
-    "language" : "fr",
-    "slots" : [ {
-      "name" : "answer",
-      "id" : "ryNyjS4Rf",
-      "entityId" : "entity_OVGZXBlxW7Kz",
-      "missingQuestion" : "Quelle ville me répondez-vous ?",
-      "required" : true
-    } ],
-    "name" : "give_answer",
-    "enabledByDefault" : true
-  }, {
-    "id" : "bluevert:lightsTurnOff",
-    "type" : "registry",
-    "version" : "1.0.0",
-    "language" : "fr",
-    "slots" : [ {
-      "name" : "house_room",
-      "id" : "slot_imported_SyOQEToxP_M",
-      "entityId" : "entity_1XgWvkyl2la",
-      "missingQuestion" : "",
-      "required" : false
-    }, {
-      "name" : "lights_type",
-      "id" : "B1Loqwauz",
-      "entityId" : "entity_4yYgeX07Zwa",
-      "missingQuestion" : "",
-      "required" : false
-    } ],
-    "name" : "lightsTurnOff",
-    "enabledByDefault" : true
-  }, {
-    "id" : "bluevert:lightsSet",
-    "type" : "registry",
-    "version" : "1.0.0",
-    "language" : "fr",
-    "slots" : [ {
-      "name" : "intensity_number",
-      "id" : "slot_imported_SJeW--kdxvOG",
-      "entityId" : "snips/number",
-      "missingQuestion" : "",
-      "required" : false
-    }, {
-      "name" : "intensity_percent",
-      "id" : "slot_imported_HyCxbWJOgDdf",
-      "entityId" : "snips/percentage",
-      "missingQuestion" : "",
-      "required" : false
-    }, {
-      "name" : "house_room",
-      "id" : "slot_imported_ryhebZkulD_M",
-      "entityId" : "entity_1XgWvkyl2la",
-      "missingQuestion" : "",
-      "required" : false
-    }, {
-      "name" : "lights_type",
-      "id" : "slot_imported_HyNbHOpdM",
-      "entityId" : "entity_4yYgeX07Zwa",
-      "missingQuestion" : "",
-      "required" : false
-    } ],
-    "name" : "lightsSet",
-    "enabledByDefault" : true
-  }, {
-    "id" : "lightsShift",
-    "type" : "registry",
-    "version" : "38.0.0",
-    "language" : "fr",
-    "slots" : [ {
-      "name" : "up_down",
-      "id" : "slot_imported_ByuWr_cJWvuz",
-      "entityId" : "entity_k7k8WN2xpO8",
-      "missingQuestion" : "",
-      "required" : false
-    }, {
-      "name" : "intensity_percent",
-      "id" : "slot_imported_SytZSOqJWPdG",
-      "entityId" : "snips/percentage",
-      "missingQuestion" : "",
-      "required" : false
-    }, {
-      "name" : "house_room",
-      "id" : "slot_imported_BkPWBO9y-v_M",
-      "entityId" : "entity_6vqEM8Eqpyr",
-      "missingQuestion" : "",
-      "required" : false
-    } ],
-    "name" : "lightsShift",
+    "name" : "quelleLettre",
     "enabledByDefault" : true
   } ],
   "createdAt" : "2019-03-06T16:17:00.755Z",

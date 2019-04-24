@@ -1,52 +1,12 @@
 {
   "parsers_metadata": [
     {
-      "entity_identifier": "Article",
+      "entity_identifier": "Jeu",
       "entity_parser": "parser_1"
     },
     {
-      "entity_identifier": "Jeu",
-      "entity_parser": "parser_2"
-    },
-    {
       "entity_identifier": "Letter",
-      "entity_parser": "parser_3"
-    },
-    {
-      "entity_identifier": "List of capitales",
-      "entity_parser": "parser_4"
-    },
-    {
-      "entity_identifier": "Qualificatif",
-      "entity_parser": "parser_5"
-    },
-    {
-      "entity_identifier": "Quoi",
-      "entity_parser": "parser_6"
-    },
-    {
-      "entity_identifier": "StartStop",
-      "entity_parser": "parser_7"
-    },
-    {
-      "entity_identifier": "house_room",
-      "entity_parser": "parser_8"
-    },
-    {
-      "entity_identifier": "lights_type",
-      "entity_parser": "parser_9"
-    },
-    {
-      "entity_identifier": "snips/default--Name",
-      "entity_parser": "parser_10"
-    },
-    {
-      "entity_identifier": "snips/default--word",
-      "entity_parser": "parser_11"
-    },
-    {
-      "entity_identifier": "up_down_lights",
-      "entity_parser": "parser_12"
+      "entity_parser": "parser_2"
     }
   ]
 }
