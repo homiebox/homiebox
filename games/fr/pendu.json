@@ -4,11 +4,13 @@
 	],
 	"name": "Pendu",
 	"difficulty": "facile",
+	"consigne": "Tu dois trouver mon mot secret, lettre par lettre. A chaque erreur j'ajoute un trait au pendu, tu as dix essais. Devines la première lettre. ",
 
 	"steps": {
-		"1": "Début du jeu de pendu",
-		"2": "Lettre suivante",
-		"3": "Vous avez perdu",
-		"4": "Bravo!"
+		"1": "Bravo, trouveras tu la prochaine?",
+		"2": "Bravo, trouveras tu la lettre suivante?",
+		"3": "Oui! Super, ensuite?",
+		"4": "Impressionant!",
+		"5": "Felicitations, tu as trouvé le mot recherché!"
 	}
 }

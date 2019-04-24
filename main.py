@@ -26,6 +26,7 @@ logging.basicConfig(
 )
 
 OPEN_GAME 				= 'hermes/intent/MagicBoxEi2i:Ouvrejeu'
+GET_LETTER				= 'hermes/intent/MagicBoxEi2i:quelleLettre'
 
 HERMES_ON_HOTWORD 			= 'hermes/hotword/default/detected'
 HERMES_START_LISTENING 		= 'hermes/asr/startListening'
@@ -35,6 +36,7 @@ HERMES_HOTWORD_TOGGLE_ON 	= 'hermes/hotword/toggleOn'
 
 def onConnect(client, userData, flags, rc):
 	mqttClient.subscribe(OPEN_GAME)
+	mqttClient.subscribe(GET_LETTER)
 
 	mqttClient.subscribe(HERMES_ON_HOTWORD)
 	mqttClient.subscribe(HERMES_START_LISTENING)
@@ -73,7 +75,7 @@ def onMessage(client, userData, message):
 			leds.off()
 		return
 
-	global game, currentStep, timers, confirm
+	global game, currentStep, timers, confirm, tofind
 
 	payload = json.loads(message.payload)
 	sessionId = payload['sessionId']
@@ -92,7 +94,6 @@ def onMessage(client, userData, message):
 				endTalk(sessionId, text=lang['warningGameAlreadyOpen'])
 				return
 			else:
-				endTalk(text=lang['debug'].format(payload['slots'][0]['rawValue']))
 				confirm = 0
 				currentStep = 0
 
@@ -108,97 +109,49 @@ def onMessage(client, userData, message):
 			time.sleep(2)
 
 			gameName = game['name'] if 'phonetic' not in game else game['phonetic']
-			timeType = lang['cookingTime'] if 'cookingTime' in game else lang['waitTime']
-			cookOrWaitTime = game['cookingTime'] if 'cookingTime' in game else game['waitTime']
 
 			say(text=lang['gamePresentation'].format(
 				gameName,
 				game['difficulty'],
-				game['person'],
-				game['totalTime'],
-				game['preparationTime'],
-				cookOrWaitTime,
-				timeType
+				game['consigne']
 			))
 		else:
 			endTalk(sessionId, text=lang['gameNotFound'])
 
-	elif intent == NEXT_STEP:
+	elif intent == GET_LETTER:
 		if game is None:
 			endTalk(sessionId, text=lang['sorryNoGameOpen'])
+
 		else:
-			if str(currentStep + 1) not in game['steps']:
-				endTalk(sessionId, text=lang['gameEnd'])
-			else:
-				currentStep += 1
-				step = game['steps'][str(currentStep)]
+			if game is not None:
+				slotLetter = payload['slot'][0]['value']['value'].encode('utf-8')
+				if slotLetter == 'h':
+					endTalk(sessionId, text=lang['debug'])
+					currentStep += 1
 
-				ask = False
-				if type(step) is dict and currentStep not in timers:
-					ask = True
-					step = step['text']
-
-				endTalk(sessionId, text=lang['nextStep'].format(step))
-				if ask:
-					say(text=lang['timeAsk'])
-
-	elif intent == INGREDIENTS:
-		if game is None:
-			endTalk(sessionId, text=lang['sorryNoGameOpen'])
-		else:
-			ingredients = ''
-			for ingredient in game['ingredients']:
-				ingredients += u"{}. ".format(ingredient)
-
-			endTalk(sessionId, text=lang['neededIngredients'].format(game['name'], ingredients))
-
-	elif intent == PREVIOUS_STEP:
-		if game is None:
-			endTalk(sessionId, text=lang['sorryNoGameOpen'])
-		else:
-			if currentStep <= 1:
-				endTalk(sessionId, text=lang['noPreviousStep'])
-			else:
-				currentStep -= 1
-				step = game['steps'][str(currentStep)]
-
-				ask = False
-				timer = 0
-				if type(step) is dict and currentStep not in timers:
-					ask = True
-					timer = step['timer']
-					step = step['text']
-
-				endTalk(sessionId, text=lang['previousStepWas'].format(step))
-				if ask:
-					say(text=lang['hadTimerAsk'].format(timer))
-
-	elif intent == REPEAT_STEP:
-		if game is None:
-			endTalk(sessionId, text=lang['sorryNoGameOpen'])
-		else:
-			if currentStep <= 1:
-				endTalk(sessionId, text=lang['nothingToSayNotStarted'])
-			else:
-				step = game['steps'][str(currentStep)]
-				endTalk(sessionId, text=lang['repeatStep'].format(step))
-
-	elif intent == ACTIVATE_TIMER:
-		if game is None:
-			endTalk(sessionId, text=lang['noTimerNotStarted'])
-		else:
-			step = game['steps'][str(currentStep)]
-
-			if type(step) is not dict:
-				endTalk(sessionId, text=lang['notTimerForThisStep'])
-			elif currentStep in timers:
-				endTalk(sessionId, text=lang['timerAlreadyRunning'])
-			else:
-				timer = Timer(int(step['timer']), onTimeUp, args=[currentStep, step])
-				timer.start()
-				timers[currentStep] = timer
-				endTalk(sessionId, text=lang['timerConfirm'])
-
+#			if confirm <=0:
+#				confirm = 1
+#				endTalk(sessionID, text=lang['warningGameAlreadyOpen'])
+#				return
+#			else:
+#				say(text=lang['debug'])
+#				confirm = 0
+#				currentStep = 1
+#
+#		if str(currentStep + 1) not in game['steps']:
+#			endTalk(sessionId, text=lang['gameEnd'])
+#		else:
+#			currentStep += 1
+#			step = game['steps'][str(currentStep)]
+#
+#			ask = False
+#			if type(step) is dict and currentStep not in timers:
+#					ask = True
+#					step = step['text']
+#
+#				endTalk(sessionId, text=lang['nextStep'].format(step))
+#			if ask:
+#				say(text=lang['timeAsk'])
 
 def error(sessionId):
 	endTalk(sessionId, lang['error'])
@@ -233,6 +186,7 @@ currentStep = 0
 timers = {}
 confirm = 0
 lang = ''
+tofind = 'homie'
 
 logger = logging.getLogger('homiebox')
 logger.addHandler(logging.StreamHandler())
