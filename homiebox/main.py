@@ -109,6 +109,8 @@ def onMessage(client, userData, message):
 			time.sleep(2)
 
 			gameName = game['name'] if 'phonetic' not in game else game['phonetic']
+			
+			currentStep = 1
 
 			say(text=lang['gamePresentation'].format(
 				gameName,
@@ -124,7 +126,9 @@ def onMessage(client, userData, message):
 
 		else:
 			if game is not None:
-				#endTalk(sessionId, text=lang['debug'])
+				endTalk(sessionId, text=lang['nextStep'].format(
+				game['steps'][str(currentStep)]))
+				currentStep +=1
 				slotLetter = payload['slot'].encode('utf-8')
                                 letter1 = 'h'
                         if slotLetter == 'h':

@@ -7,10 +7,10 @@
 	"consigne": "I will play some animals sounds, can you recognized them?",
 
 	"steps": {
-		"1": "C'est ca!",
-		"2": "Non essaye encore",
-		"3": "Pas vraiment",
-		"4": "Tu te rapproches",
-		"5": "Felicitations, tu as trouvé!"
+		"1": "That's it, congratulations",
+		"2": "Try again",
+		"3": "Not really",
+		"4": "You are so close",
+		"5": "Congratulations, you win!"
 	}
 }

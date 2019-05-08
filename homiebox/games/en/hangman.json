@@ -7,10 +7,10 @@
 	"consigne": "You have to find my secret word. Letter by letter. I've got 10 tries ",
 
 	"steps": {
-		"1": "Bravo, trouveras tu la prochaine?",
-		"2": "Bravo, trouveras tu la lettre suivante?",
-		"3": "Oui! Super, ensuite?",
-		"4": "Impressionant!",
-		"5": "Felicitations, tu as trouvé le mot recherché!"
+		"1": "Congratulations, next letter",
+		"2": "Impressive, next one",
+		"3": "Great!",
+		"4": "You are the best",
+		"5": "You win! Congratulations"
 	}
 }

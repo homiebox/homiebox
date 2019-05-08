@@ -7,10 +7,10 @@
 	"consigne": "La question cooooooooooo, la question iiiiiiiine ",
 
 	"steps": {
-		"1": "Tu chauffes",
-		"2": "Tu refroidis",
+		"1": "C'est chaud",
+		"2": "Oui, tu en connais des choses",
 		"3": "Tu brûles",
-		"4": "Tu te rapproches",
-		"5": "Felicitations, tu as trouvé!"
+		"4": "Impressionnant",
+		"5": "Bon je crois que je vais te laisser"
 	}
 }

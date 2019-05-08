@@ -8,7 +8,7 @@
 	"gameNotFound": "Je n'ai pas compris, a quel jeu veux tu jouer?",
 	"sorryNoGameOpen": "Nous n'avons commencé aucun jeu! A quoi veux tu jouer?",
 	"gameEnd": "Fin du jeu, a bientôt!",
-	"nextStep": "Lettre suivante: {}",
+	"nextStep": "{}",
 	"nothingToSayNotStarted": "Je n'ai rien a répéter, on a même pas commencé!",
 	"error": "Désolé, mais il y a eu une erreur"
 }
