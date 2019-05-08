@@ -1,16 +1,16 @@
 {
 	"categories": [
-		"Game Repspeaker 4Mic medium"
+		"Game Repspeaker 2mic + satellite medium"
 	],
-	"name": "Tu chauffes",
-	"difficulty": "Moyen",
-	"consigne": "Tu dois te déplacer dans la pièce, je choisi une direction, lorsque tu penses être proche de mon objectif, demande si tu chauffes, ou tu brûles  ",
+	"name": "Talkie Walkie",
+	"difficulty": "Facile",
+	"consigne": "Demande moi d'appeler pour ouvrir une conversation avec la pièce que tu souhaites ",
 
 	"steps": {
-		"1": "Tu chauffes",
-		"2": "Tu refroidis",
-		"3": "Tu brûles",
-		"4": "Tu te rapproches",
-		"5": "Felicitations, tu as trouvé!"
+		"1": "D'accord j'appelle",
+		"2": "Ok je raccroche",
+		"3": "Voulez vous continuer l'appel?",
+		"4": "Oui",
+		"5": "Non"
 	}
 }

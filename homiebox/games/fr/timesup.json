@@ -1,15 +1,15 @@
 {
 	"categories": [
-		"Game Repspeaker 4Mic medium"
+		"Game Repspeaker 2mic + screen Hard"
 	],
-	"name": "Tu chauffes",
+	"name": "Time's up",
 	"difficulty": "Moyen",
-	"consigne": "Tu dois te déplacer dans la pièce, je choisi une direction, lorsque tu penses être proche de mon objectif, demande si tu chauffes, ou tu brûles  ",
+	"consigne": "Regarde bien l'écran, et devine qui j'imite ",
 
 	"steps": {
-		"1": "Tu chauffes",
-		"2": "Tu refroidis",
-		"3": "Tu brûles",
+		"1": "Bravo",
+		"2": "Trop tard",
+		"3": "Presque",
 		"4": "Tu te rapproches",
 		"5": "Felicitations, tu as trouvé!"
 	}

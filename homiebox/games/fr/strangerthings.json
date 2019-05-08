@@ -1,0 +1,16 @@
+{
+	"categories": [
+		"Game Repspeaker 4Mic + Smart Hue + Satellite Hard"
+	],
+	"name": "Stranger Things",
+	"difficulty": "Hard",
+	"consigne": "Surveilles les lumières autour de toi, je crois qu'elles veulent te passer un message, sauras tu le décoder? ",
+
+	"steps": {
+		"1": "Oui",
+		"2": "Non",
+		"3": "Tu brûles",
+		"4": "Tu te rapproches",
+		"5": "Suis la lumière!"
+	}
+}
