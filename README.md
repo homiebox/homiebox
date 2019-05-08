@@ -1,3 +1,0 @@
-# homiebox
-
-Snips games platform
