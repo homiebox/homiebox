@@ -1,0 +1,16 @@
+{
+	"categories": [
+		"Game Repspeaker 4Mic + Smart Hue + Satellite Hard"
+	],
+	"name": "Stranger Things",
+	"difficulty": "Hard",
+	"consigne": "Follow the lights, i think they've got a message for you ",
+
+	"steps": {
+		"1": "Yes",
+		"2": "No",
+		"3": "I feel it",
+		"4": "You are so close",
+		"5": "Follow the light!"
+	}
+}

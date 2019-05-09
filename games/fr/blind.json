@@ -1,0 +1,14 @@
+{
+	"categories": [
+		"Game Repspeaker 2mics easy"
+	],
+	"name": "Blind Test",
+	"difficulty": "Moyen",
+	"consigne": "Je vais jouer des morceaux de musiques, sauras-tu retrouver le nom ou l'artiste?  ",
+
+	"steps": {
+		"1": "ET non!",
+		"2": "Bravo, quelle culture, chanson suivante",
+		"3": "Felicitations, c'est terminé!"
+	}
+}

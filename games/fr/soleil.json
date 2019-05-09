@@ -1,0 +1,16 @@
+{
+	"categories": [
+		"Game Repspeaker 2Mic + Camera medium"
+	],
+	"name": "1 2 3 Soleil",
+	"difficulty": "Moyen",
+	"consigne": "Je vais prononcer 1, 2 ,3 soleil. Si je te vois bouger, je prends la photo, et tu as perdu!  ",
+
+	"steps": {
+		"1": "Bougez",
+		"2": "Je ne vois rien, il n'y a que des meubles?",
+		"3": "Hum Hum, bizarre",
+		"4": "J'ai cru voir quelque chose!",
+		"5": "Felicitations, tu as gagné!"
+	}
+}

@@ -1,0 +1,16 @@
+{
+	"categories": [
+		"Game Repspeaker 4Mic medium"
+	],
+	"name": "Sherlock Holmes",
+	"difficulty": "Difficile",
+	"consigne": "Sauras-tu résoudre ces énigmes?  ",
+
+	"steps": {
+		"1": "Tu chauffes",
+		"2": "Tu refroidis",
+		"3": "Tu brûles",
+		"4": "Tu te rapproches",
+		"5": "Felicitations, tu as trouvé!"
+	}
+}

@@ -1,0 +1,16 @@
+{
+	"categories": [
+		"Game Repspeaker simple"
+	],
+	"name": "Hangman",
+	"difficulty": "easy",
+	"consigne": "You have to find my secret word. Letter by letter. I've got 10 tries ",
+
+	"steps": {
+		"1": "Congratulations, next letter",
+		"2": "Impressive, next one",
+		"3": "Great!",
+		"4": "You are the best",
+		"5": "You win! Congratulations"
+	}
+}

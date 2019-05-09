@@ -1,0 +1,16 @@
+{
+	"categories": [
+		"Game Repspeaker 2Mic moyen"
+	],
+	"name": "Petit bac",
+	"difficulty": "Moyen",
+	"consigne": "Je vais prononcer une lettre au hasard ainsi qu'une categorie, tu devras donner le maximum de mots en 1 minute, pret? ",
+
+	"steps": {
+		"1": "Felictation tu as gagné la manche",
+		"2": "Dommage tu as perdu",
+		"3": "Manche suivante",
+		"4": "Deniere manche",
+		"5": "Felicitations, tu as gagné la partie"
+	}
+}

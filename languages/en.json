@@ -1,0 +1,14 @@
+{
+	"appReady": "Play with Homie!",
+	"stopping": "End of the game",
+	"debug": "Debug message",
+	"warningGameAlreadyOpen": "A game is already running",
+	"confirmOpening": "Let's play to {}",
+	"gamePresentation": "The game {} is level {}. {}",
+	"gameNotFound": "I don't understand, what's game did you want to play?",
+	"sorryNoGameOpen": "We didn't start yet. What game want you to play?",
+	"gameEnd": "End of the game, see you soon",
+	"nextStep": "{}",
+	"nothingToSayNotStarted": "I have got nothing to repeat.",
+	"error": "Sorry, something wrong appends"
+}

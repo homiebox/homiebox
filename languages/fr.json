@@ -1,0 +1,14 @@
+{
+	"appReady": "Play with Homie!",
+	"stopping": "Fin de la partie",
+	"debug": "Message de débeugue",
+	"warningGameAlreadyOpen": "Une partie est déjà commencée!",
+	"confirmOpening": "C'est parti! Jouons à {}",
+	"gamePresentation": "Le jeu de {} est de niveau {}. {}",
+	"gameNotFound": "Je n'ai pas compris, a quel jeu veux tu jouer?",
+	"sorryNoGameOpen": "Nous n'avons commencé aucun jeu! A quoi veux tu jouer?",
+	"gameEnd": "Fin du jeu, a bientôt!",
+	"nextStep": "{}",
+	"nothingToSayNotStarted": "Je n'ai rien a répéter, on a même pas commencé!",
+	"error": "Désolé, mais il y a eu une erreur"
+}
